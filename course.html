@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>プレミアムコース</title>
+  <title>彩・雅 コース</title>
 
   <style>
     body {
@@ -33,18 +33,73 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
       margin-top: 20px;
     }
+
+    /* プルダウン */
+    .lang-select {
+      margin: 15px 0;
+    }
+    select {
+      padding: 8px 14px;
+      font-size: 15px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
   </style>
 </head>
 <body>
 
-  <h1>彩・雅　コース</h1>
-<h2><a href="index.html">トップに戻る</a></h2>
-
-  <div class="image-wrap">
-    <img src="picture/course.jpg" alt="プレミアムコース">
+  <!-- 言語選択（プルダウン） -->
+  <div class="lang-select">
+    <select id="langSelect" onchange="changeLang()">
+      <option value="ja">日本語</option>
+      <option value="en">English</option>
+      <option value="ko">한국어</option>
+      <option value="zh">中文</option>
+    </select>
   </div>
 
-  <h2>※写真は雅コースの写真です。</h2>
+  <h1 id="title">彩・雅 コース</h1>
+
+  <h2><a id="back" href="index.html">トップに戻る</a></h2>
+
+  <div class="image-wrap">
+    <img src="picture/course.jpg" alt="彩・雅コース">
+  </div>
+
+  <h2 id="photo-note">※写真は雅コースの写真です。</h2>
+
+  <script>
+    const langData = {
+      ja: {
+        title: "彩・雅 コース",
+        back: "トップに戻る",
+        photo: "※写真は雅コースの写真です。"
+      },
+      en: {
+        title: "Sai / Miyabi Course",
+        back: "Back to Top",
+        photo: "*The photo shows the Miyabi course."
+      },
+      ko: {
+        title: "사이・미야비 코스",
+        back: "맨 위로 돌아가기",
+        photo: "※사진은 미야비 코스입니다."
+      },
+      zh: {
+        title: "彩・雅 套餐",
+        back: "返回首页",
+        photo: "※照片为雅套餐示意图。"
+      }
+    };
+
+    function changeLang() {
+      const lang = document.getElementById("langSelect").value;
+      const L = langData[lang];
+      document.getElementById("title").textContent = L.title;
+      document.getElementById("back").textContent = L.back;
+      document.getElementById("photo-note").textContent = L.photo;
+    }
+  </script>
 
 </body>
 </html>
