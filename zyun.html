@@ -1,73 +1,42 @@
-<style>
-  body {
-    font-family: "Segoe UI", sans-serif;
-    margin: 0;
-    padding: 20px;
-    background: #fff;
-    color: #333;
-    text-align: center;
-  }
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #fff;
+      color: #333;
+      text-align: center;
+    }
 
-  h1 {
-    font-size: 26px;
-    margin-bottom: 10px;
-    font-weight: bold;
-  }
+    h1 {
+      font-size: 26px;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
 
-  h2 {
-    margin-top: 20px;
-    font-size: 18px;
-    color: #444;
-    line-height: 1.6;
-  }
+    h2 {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #444;
+      line-height: 1.6;
+    }
 
-  select {
-    margin-top: 15px;
-    padding: 8px 12px;
-    font-size: 16px;
-    border-radius: 8px;
-    border: 1px solid #666;
-    background: #f7f7f7;
-  }
-
-  .image-wrap img {
-    max-width: 90%;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    margin-top: 20px;
-  }
-</style>
+    .image-wrap img {
+      max-width: 90%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      margin-top: 20px;
+    }
+  </style>
 
 <h1 style="text-align:center; font-size:28px; margin-top:20px; margin-bottom:10px; font-weight:bold;">
-  じゅんコース
-</h1>
+  じゅんコース</h1>
+<h2><a href="index.html">トップに戻る</a></h2>
 
-<h2>
-  <a href="index.html">トップに戻る</a>
-</h2>
-
-<!-- ▼ 言語選択プルダウン -->
-<select onchange="changeLang(this.value)">
-  <option value="ja">日本語（JP）</option>
-  <option value="en">English（EN）</option>
-  <option value="zh">中文（CN）</option>
-  <option value="ko">한국어（KR）</option>
-</select>
-
-<script>
-  function changeLang(lang) {
-    alert("※ 言語機能はまだ設定されていません。\n\n選択された言語: " + lang);
-    /*  
-      ▼ 実際に翻訳ページへ飛ばす、または各言語版HTMLへ移動したい場合はここに設定
-      location.href = "jun_" + lang + ".html";
-    */
-  }
-</script>
 
 <div style="text-align:center; margin-bottom:20px;">
-  <img src="picture/zyun.jpg"
-       style="max-width:500px; width:100%; height:auto; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.15);">
+  <img src="picture/zyun.jpg" style="max-width:500px; width:100%; height:auto; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.15);">
 </div>
 
 <h2 style="text-align:center; font-size:18px; color:#555; margin-bottom:10px;">

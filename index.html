@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -6,8 +7,7 @@
   <title>メニュー選択</title>
   <style>
     body {
-      margin: 0;
-      font-family: "Segoe UI", sans-serif;
+      margin: 0;  
       background: #f6f6f6;
       color: #333;
     }
@@ -22,22 +22,6 @@
       font-size: 30px;
       font-weight: bold;
     }
-
-    /* プルダウン */
-    .lang-select {
-      text-align: center;
-      margin-top: 20px;
-    }
-    select {
-      padding: 10px 18px;
-      border-radius: 10px;
-      border: 1px solid #ccc;
-      font-size: 16px;
-      background: #fff;
-      cursor: pointer;
-    }
-
-    /* メニュー */
     .menu-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -77,138 +61,49 @@
 </head>
 <body>
   <header>
-    <h1 id="title">和牛とごはん焼肉じゅん 枚方市役所前店</h1>
+    <h1>和牛とごはん焼肉じゅん 枚方市役所前店 </h1>
   </header>
 
-  <!-- 言語選択（プルダウン） -->
-  <div class="lang-select">
-    <select id="langSelect" onchange="changeLang(this.value)">
-      <option value="ja">日本語</option>
-      <option value="en">English</option>
-      <option value="ko">한국어</option>
-      <option value="zh">中文</option>
-    </select>
-  </div>
-
   <div class="menu-container">
+
     <a class="menu-card" href="tabehoudai.html">
-      <h2 id="menu1-title">食べ放題・飲み放題</h2>
-      <p id="menu1-desc">好きなだけ楽しめるプラン</p>
+      <h2>食べ放題・飲み放題</h2>
+      <p>好きなだけ楽しめるプラン</p>
     </a>
 
     <a class="menu-card" href="tanpin.html">
-      <h2 id="menu2-title">単品</h2>
-      <p id="menu2-desc">一品ずつご注文いただけます</p>
+      <h2>単品</h2>
+      <p>一品ずつご注文いただけます</p>
     </a>
 
     <a class="menu-card" href="course.html">
-      <h2 id="menu3-title">コース</h2>
-      <p id="menu3-desc">おすすめがまとまったセット</p>
+      <h2>コース</h2>
+      <p>おすすめがまとまったセット</p>
     </a>
 
     <a class="menu-card" href="lunch.html">
-      <h2 id="menu4-title">ランチ</h2>
-      <p id="menu4-desc">昼限定のお得メニュー</p>
+      <h2>ランチ</h2>
+      <p>昼限定のお得メニュー</p>
     </a>
 
     <a class="menu-card" href="https://kagonoya.food-kr.com/0661/" target="_blank">
-      <h2 id="menu5-title">ホームページ</h2>
-      <p id="menu5-desc">焼肉じゅん枚方市役所前店HP</p>
+      <h2>ホームページ</h2>
+      <p>焼肉じゅん枚方市役所前店HP</p>
     </a>
-
-    <a class="menu-card" href="https://booking.ebica.jp/webrsv/search/e014054401/21644" target="_blank">
-      <h2 id="menu6-title">ご予約はこちら</h2>
-      <p id="menu6-desc">お席のご予約いただけます</p>
+    <a class="menu-card" href="https://booking.ebica.jp/webrsv/search/e014054401/21644?_gl=1*17fuoma*_ga*NzAwNzQ2NDA3LjE3NjQyNDY4MTU.*_ga_WN1NCE530D*czE3NjQzMTA0NTckbzUkZzEkdDE3NjQzMTE3NDkkajUzJGwwJGgw*_ga_S9HGY0YDEV*czE3NjQzMTA0NTgkbzUkZzEkdDE3NjQzMTE3NDkkajUzJGwwJGgw " target="_blank">
+      <h2>ご予約はこちら</h2>
+      <p>お席のご予約いただけます</p>
     </a>
-
     <a class="menu-card" href="https://page.line.me/508bydty" target="_blank">
-      <h2 id="menu7-title">じゅん公式LINE</h2>
-      <p id="menu7-desc">お友達追加でジェラートプレゼント！！</p>
+      <h2>じゅん公式ＬＩＮＥ</h2>
+      <p>お友達追加でジェラートプレゼント！！</p>
     </a>
 
     <a class="menu-card" href="https://www.instagram.com/yakiniku_jun_hirakata/" target="_blank">
-      <h2 id="menu8-title">インスタグラム</h2>
-      <p id="menu8-desc">最新情報発信中</p>
+      <h2>インスタグラム</h2>
+      <p>最新情報発信中</p>
     </a>
+
   </div>
-
-  <script>
-    const langData = {
-      ja: {
-        title: "和牛とごはん焼肉じゅん 枚方市役所前店",
-        m1: ["食べ放題・飲み放題", "好きなだけ楽しめるプラン"],
-        m2: ["単品", "一品ずつご注文いただけます"],
-        m3: ["コース", "おすすめがまとまったセット"],
-        m4: ["ランチ", "昼限定のお得メニュー"],
-        m5: ["ホームページ", "焼肉じゅん枚方市役所前店HP"],
-        m6: ["ご予約はこちら", "お席のご予約いただけます"],
-        m7: ["じゅん公式LINE", "お友達追加でジェラートプレゼント！！"],
-        m8: ["インスタグラム", "最新情報発信中"],
-      },
-      en: {
-        title: "Yakiniku Jun Hirakata City Hall",
-        m1: ["All-you-can-eat / Drink", "Enjoy as much as you like"],
-        m2: ["À la carte", "Order one by one"],
-        m3: ["Course Menu", "Recommended set course"],
-        m4: ["Lunch", "Special lunch menu"],
-        m5: ["Website", "Official HP"],
-        m6: ["Reservation", "Reserve your seat"],
-        m7: ["Official LINE", "Get free gelato!"],
-        m8: ["Instagram", "Latest updates"],
-      },
-      ko: {
-        title: "와규와 밥 야키니쿠 준 히라카타 시청앞점",
-        m1: ["무한리필·무한음료", "마음껏 즐기세요"],
-        m2: ["단품", "하나씩 주문 가능합니다"],
-        m3: ["코스", "추천 메뉴 세트"],
-        m4: ["런치", "점심 한정 메뉴"],
-        m5: ["홈페이지", "공식 웹사이트"],
-        m6: ["예약하기", "좌석 예약 가능합니다"],
-        m7: ["공식 LINE", "친추로 젤라또 선물!"],
-        m8: ["인스타그램", "최신 소식"],
-      },
-      zh: {
-        title: "和牛与米 烧肉じゅん 枚方市政府前店",
-        m1: ["自助餐 / 无限畅饮", "想吃多少就吃多少"],
-        m2: ["单品", "可单点"],
-        m3: ["套餐", "推荐套餐组合"],
-        m4: ["午餐", "午市限定优惠菜单"],
-        m5: ["主页", "官方网页"],
-        m6: ["预约入口", "可提前预约座位"],
-        m7: ["官方LINE", "加好友送冰淇淋！"],
-        m8: ["Instagram", "最新资讯"],
-      },
-    };
-
-    function changeLang(lang) {
-      const L = langData[lang];
-      document.getElementById("title").textContent = L.title;
-
-      document.getElementById("menu1-title").textContent = L.m1[0];
-      document.getElementById("menu1-desc").textContent = L.m1[1];
-
-      document.getElementById("menu2-title").textContent = L.m2[0];
-      document.getElementById("menu2-desc").textContent = L.m2[1];
-
-      document.getElementById("menu3-title").textContent = L.m3[0];
-      document.getElementById("menu3-desc").textContent = L.m3[1];
-
-      document.getElementById("menu4-title").textContent = L.m4[0];
-      document.getElementById("menu4-desc").textContent = L.m4[1];
-
-      document.getElementById("menu5-title").textContent = L.m5[0];
-      document.getElementById("menu5-desc").textContent = L.m5[1];
-
-      document.getElementById("menu6-title").textContent = L.m6[0];
-      document.getElementById("menu6-desc").textContent = L.m6[1];
-
-      document.getElementById("menu7-title").textContent = L.m7[0];
-      document.getElementById("menu7-desc").textContent = L.m7[1];
-
-      document.getElementById("menu8-title").textContent = L.m8[0];
-      document.getElementById("menu8-desc").textContent = L.m8[1];
-    }
-  </script>
-
 </body>
 </html>
